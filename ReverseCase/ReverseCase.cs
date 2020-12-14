@@ -21,16 +21,23 @@ namespace CodingChallenge {
             //convert to a char array for letter by letter basis
             char[] charArr = str.ToCharArray();
 
-
+            //loop through all items in char array
             for (int i = 0; i < charArr.Length; i++)
             {
+                //Convert to lower if upper case
                 if (char.IsUpper(charArr[i]) == true)
                 {
                     charArr[i] = char.ToLower(charArr[i]);
                 }
-                else 
+                //convert to upper if lower case
+                else if (char.IsLower(charArr[i]) == true)
                 {
                     charArr[i] = char.ToUpper(charArr[i]);
+                }
+                //for other characters
+                else
+                {
+                    charArr[i] = charArr[i];
                 }
             }
 
@@ -41,7 +48,8 @@ namespace CodingChallenge {
         // Main Method 
         static void Main(string[] args) 
         { 
-            string str = "Happy Birthday";
+            //string str = "Happy Birthday";
+            string str = "sPoNtAnEoUs";
             
            string result = ReverseCase(str);
 

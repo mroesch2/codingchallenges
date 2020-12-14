@@ -5,8 +5,9 @@ Return a new (single) array with the largest numbers of each.
 //Difficulty: Medium
 
 
-using System; 
-using System.Text.RegularExpressions;
+using System;
+using System.Linq;
+using System.Collections.Generic;
   
 // namespace declaration 
 namespace CodingChallenge { 
@@ -16,9 +17,9 @@ namespace CodingChallenge {
     { 
         
 
-        static public int[] FindLargest(int[][] jaggedArr)
+        static public double[] FindLargest(double[][] jaggedArr)
         {
-            int[] largestArr = new int[jaggedArr.Length];
+            double[] largestArr = new double[jaggedArr.Length];
 
             //get into the rows of the array
             for (int i = 0; i < jaggedArr.Length; i++)
@@ -45,14 +46,14 @@ namespace CodingChallenge {
         static void Main(string[] args) 
         { 
            //Create and initialize an array of arrays
-           int[][] jaggedArr = new int[][]
+           double[][] jaggedArr = new double[][]
            {
-                new int[] {4, 2, 7, 1},
-                new int[] {20, 70, 40, 90},
-                new int[] {1, 2, 0}
+                new double[] {0.4321, 0.7634, 0.652},
+                new double[] {1.324, 9.32, 2.5423, 6.4314},
+                new double[] {9, 3, 6, 3}
            };
 
-           int[] result;
+           double[] result;
 
            result = FindLargest(jaggedArr);
 

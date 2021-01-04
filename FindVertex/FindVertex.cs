@@ -22,13 +22,34 @@ namespace CodingChallenge {
         //Returning multiple values so store it in a double array
         static public double[] FindVertex(double a, double b, double c)
         {
-  
+            //Quad equation: y = ax2 + bx + c
+
+            //store values in double array
+            double[] result = new double[2];
+            
+            //to find x-coordinate use -b/2a
+            double x = (b * -1)/(2*a);
+
+            //for y, plug in above result for x and solve for y
+            double y = (a*x*2) + (b * x) + c;
+
+            result[0] = x;
+            result[1] = y;
+
+            return result;
+
         }
       
         // Main Method 
         static void Main(string[] args) 
         { 
-           
+            double[] result = new double[2];
+            
+            result = FindVertex(1, 0, 25);        //[0, 25]
+            //FindVertex(-1, 0, 25)       //[0, 25]
+            //FindVertex(1, 10, 4)        //[-5, -21]
+
+            Console.WriteLine($"The vertex is at: ({result[0]} , {result[1]})");
         }
     }
              

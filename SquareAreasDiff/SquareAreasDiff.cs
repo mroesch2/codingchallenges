@@ -30,6 +30,7 @@ namespace CodingChallenge {
             //Stores the different between the two areas 
             int result = inner - outer;
 
+            //return the different between the two
             return result;
         
         }
@@ -39,7 +40,7 @@ namespace CodingChallenge {
         { 
             //int radius = 5;       //Passed
             //int radius = 6;       //Passed
-            int radius = 7;
+            int radius = 7;         //Passed
 
             int difference = SquareAreasDiff(radius);
 

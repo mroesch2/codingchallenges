@@ -45,9 +45,9 @@ namespace CodingChallenge {
         { 
             double[] result = new double[2];
             
-            result = FindVertex(1, 0, 25);        //[0, 25]
-            //FindVertex(-1, 0, 25)       //[0, 25]
-            //FindVertex(1, 10, 4)        //[-5, -21]
+            //FindVertex(1, 0, 25);        //[0, 25]
+            //FindVertex(-1, 0, 25);       //[0, 25]
+            result = FindVertex(1, 10, 4);        //[-5, -21]
 
             Console.WriteLine($"The vertex is at: ({result[0]} , {result[1]})");
         }

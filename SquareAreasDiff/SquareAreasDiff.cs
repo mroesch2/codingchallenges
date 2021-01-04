@@ -19,15 +19,31 @@ namespace CodingChallenge {
     { 
         
 
-        static public string SquareAreasDiff(int r)
+        static public int SquareAreasDiff(int r)
         {
+            //Need the area of the inner square which is r*r*2
+            int inner = (r*r*2);
+
+            //Area for outer would be the opposite r/r/2
+            int outer = (r/r/2);
+
+            //Stores the different between the two areas 
+            int result = inner - outer;
+
+            return result;
         
         }
       
         // Main Method 
         static void Main(string[] args) 
         { 
-        
+            //int radius = 5;       //Passed
+            //int radius = 6;       //Passed
+            int radius = 7;
+
+            int difference = SquareAreasDiff(radius);
+
+            Console.WriteLine(difference);
         }
     }
              

@@ -7,7 +7,7 @@ Difficulty: Medium
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
+
   
 // namespace declaration 
 namespace CodingChallenge { 
@@ -19,9 +19,10 @@ namespace CodingChallenge {
 
         static public string FindBomb(string s)
         {
-
+            //String.Contains checks for substring, returns boolean value
             bool result = s.Contains("bomb");
 
+            //returns string depending on if the bool is true
             if (result == true)
             {
                 return "Duck!!!";
@@ -35,7 +36,10 @@ namespace CodingChallenge {
         // Main Method 
         static void Main(string[] args) 
         { 
+            //Passed
             string s = "There is a bomb.";
+
+            //Passed
             //string s = "This goes boom!!!";
 
             string result = FindBomb(s);

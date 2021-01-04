@@ -22,7 +22,7 @@ namespace CodingChallenge {
         //Returning multiple values so store it in a double array
         static public double[] FindVertex(double a, double b, double c)
         {
-            //Quad equation: y = ax2 + bx + c
+            //Quad equation: y = ax^2 + bx + c
 
             //store values in double array
             double[] result = new double[2];
@@ -30,8 +30,10 @@ namespace CodingChallenge {
             //to find x-coordinate use -b/2a
             double x = (b * -1)/(2*a);
 
+            Console.WriteLine(x);
+
             //for y, plug in above result for x and solve for y
-            double y = (a*x*2) + (b * x) + c;
+            double y = (a*(Math.Pow(x, 2))) + (b * x) + c;
 
             result[0] = x;
             result[1] = y;

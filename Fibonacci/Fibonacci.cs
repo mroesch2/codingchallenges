@@ -17,32 +17,44 @@ namespace CodingChallenge {
     class Challenge 
     { 
         
-        static public int Fibonacci(int n)
+        static public string Fibonacci(int n)
         {
+            double result;
+
+            //Following store parts of Binet Formula that don't change
+            double squareOfFive = Math.Sqrt(5);     
+            double num1 = (1 + squareOfFive)/2;      
+            double num2 = (1 - squareOfFive)/2; 
+
            //check n value to see if its greater than 200
            if (n > 200)
            {
-               return 0;
+               return "Number is too high";
            }
+            //Calculation for everything past 1 using Binet Formula
+            // F(n)=((1+sqrt(5)/2)^n - (1-sqrt(5)/2)^2)/sqrt(5)
+            else
+            {
+                num1 = Math.Pow(num1, n);
+                num2 = Math.Pow(num2, n);
 
+                result = (num1 - num2)/squareOfFive;
+
+                string answer = result.ToString();
+
+                return answer;
+            }
         }
       
         // Main Method 
         static void Main(string[] args) 
         { 
-           int n = 50;
+           int n = 11;
 
-           int result = Fibonacci(n);
+           string result = Fibonacci(n);
 
            //If n is greater than 200, print an error message 
-           if (result == 0)
-           {
-               Console.WriteLine("Number cannot be larger than 200. Try again");
-           }
-           else
-           {
-               Console.WriteLine(result);
-           }
+               Console.WriteLine($"Done. Answer is {result}");
         }
     }
              

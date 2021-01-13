@@ -22,17 +22,22 @@ namespace CodingChallenge {
            //Convert strings to char arrays to replace each * with matching vowel
            char[] cen = censored.ToCharArray();
            char[] vow = vowels.ToCharArray();
+           //stores result of char comparison
            bool result;
+           //variable used to proceed to next value in vow array. Must start at 0
            int n = 0;
            
           //loop to get inside the cen array
            for (int i = 0; i < censored.Length; i++)
            {
+             //stores boolean answer in a variable
              result = cen[i].Equals('*');
 
              if(result == true)
              {
+               //Changes '*' to the correct letter in the vowels array
                cen[i] = vow[n];
+               //Allows us to move forward +1 to next vowel instead of looping through
                n++;
              }
              else
@@ -41,6 +46,7 @@ namespace CodingChallenge {
              }
            }
           
+          //converts it back into a string to be returned
           censored = new string(cen);
           return censored;
 

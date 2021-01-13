@@ -50,7 +50,8 @@ namespace CodingChallenge {
         static void Main(string[] args) 
         { 
           //string result = Uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo");
-          string result = Uncensor("abcd", "");
+          //string result = Uncensor("abcd", "");
+          string result = Uncensor("*PP*RC*S*", "UEAE");
 
           Console.WriteLine(result);
         }

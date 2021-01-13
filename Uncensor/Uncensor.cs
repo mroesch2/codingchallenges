@@ -49,7 +49,8 @@ namespace CodingChallenge {
         // Main Method 
         static void Main(string[] args) 
         { 
-          string result = Uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo");
+          //string result = Uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo");
+          string result = Uncensor("abcd", "");
 
           Console.WriteLine(result);
         }

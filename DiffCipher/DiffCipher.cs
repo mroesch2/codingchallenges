@@ -77,7 +77,6 @@ namespace CodingChallenge {
                 //calculates the sum between the current array item and one before it to get the ascii decimal character    
                 sum = currNum + message[i];
 
-                //Console.WriteLine(sum);
 
                 //stores the sum value as a temporary char value so it can be added to the string
                 temp = Convert.ToChar(sum);
@@ -98,9 +97,9 @@ namespace CodingChallenge {
         static void Main(string[] args) 
         { 
             int[] arr = {72, 33, -73, 84, -12, -3, 13, -13, -68 };
-          //string result = Encrypt("Hello");
-          string result = Decrypt(arr);
-          //string result = Encrypt("Sunshine");
+            //string result = Encrypt("Hello");
+            string result = Decrypt(arr);
+            //string result = Encrypt("Sunshine");
 
           Console.WriteLine(result);
         }

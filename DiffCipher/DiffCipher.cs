@@ -54,16 +54,52 @@ namespace CodingChallenge {
             return answer;
         }
 
-         /*static public string Decrypt(int[] message)
+         static public string Decrypt(int[] message)
         {
-          
-        }*/
+            //Converts first number in array to a char
+            char c = Convert.ToChar(message[0]);
+            
+            //Creates the string answer with the first letter
+            string answer = c.ToString();
+            
+            //Variable to hold the sum of two nums in the for loop
+            int sum;
+           
+            //stores temp char to be put in the answer
+            char temp;
+
+            //Sets the current number used in the for loop
+            int currNum = message[0];
+
+            //starts at 1 since message[0] is already found
+            for (int i = 1; i < message.Length; i++)
+            {
+                //calculates the sum between the current array item and one before it to get the ascii decimal character    
+                sum = currNum + message[i];
+
+                //Console.WriteLine(sum);
+
+                //stores the sum value as a temporary char value so it can be added to the string
+                temp = Convert.ToChar(sum);
+
+                //stores next char in the answer
+                answer += temp.ToString();
+
+                //updates num to current array item to be used in next calculation
+                currNum = sum;
+                
+            }
+
+            return answer;
+
+        }
       
         // Main Method 
         static void Main(string[] args) 
         { 
-          string result = Encrypt("Hello");
-          //Decrypt([ 72, 33, -73, 84, -12, -3, 13, -13, -68 ])
+            int[] arr = {72, 33, -73, 84, -12, -3, 13, -13, -68 };
+          //string result = Encrypt("Hello");
+          string result = Decrypt(arr);
           //string result = Encrypt("Sunshine");
 
           Console.WriteLine(result);
